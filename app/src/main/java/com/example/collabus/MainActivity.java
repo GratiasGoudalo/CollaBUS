@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnLogin;
     TextView tvRegister;
 
-    LoginResponse loginResponse;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Intent intent =getIntent();
-        if(intent.getExtras() != null){
-            loginResponse = (LoginResponse) intent.getSerializableExtra("data");
-            Log.e("TAG", "=====>"+loginResponse.getEmail());
 
-        }
 
         etEmail= (EditText) findViewById(R.id.et_email);
         etPassword= (EditText) findViewById(R.id.et_password);
